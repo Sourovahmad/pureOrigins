@@ -38,6 +38,7 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
+
         $gallery = new gallery;
         $gallery->gallery_category_id = $request->gallery_category_id;
 
@@ -58,7 +59,7 @@ class GalleryController extends Controller
 
 
         $gallery->save();
-        return redirect()->back()->withSuccess(['Successfully Created']);
+        return redirect()->back()->withSuccess(['Gallery  Created Succesfully']);
     }
 
     /**

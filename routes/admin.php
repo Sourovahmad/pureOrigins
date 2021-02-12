@@ -5,6 +5,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceCategoryController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
@@ -38,4 +39,5 @@ Route::resource('gallery-categories',GalleryCategoryController::class);
 Route::resource('images',ImageController::class);
 Route::resource('setting',SettingController::class);
 Route::resource('service-category',ServiceCategoryController::class);
+Route::resource('post',PostController::class);
 

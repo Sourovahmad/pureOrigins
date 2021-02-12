@@ -4,9 +4,9 @@
 
 
     <li class="nav-item  ">
-        <a class="nav-link text-center btn  " href="">
-
-            <span class=" text-light   "> <i class="fas fa-plus text-light   "></i>New </span></a>
+        <a class="nav-link text-center btn  " href="{{ route('post.index') }}">
+            <button type="button" class="btn btn-outline-success"><i class="fas fa-plus text-light"></i>New </button>
+            </a>
     </li>
 
 

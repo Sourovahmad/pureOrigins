@@ -39,6 +39,7 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
+
         $allbanners = banner::all();
         if (count($allbanners) >= 4) {
 
