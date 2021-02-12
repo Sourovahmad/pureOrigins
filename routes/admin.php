@@ -40,4 +40,4 @@ Route::resource('images',ImageController::class);
 Route::resource('setting',SettingController::class);
 Route::resource('service-category',ServiceCategoryController::class);
 Route::resource('post',PostController::class);
-
+Route::post('categorySave', [GalleryCategoryController::class, 'ajaxSave'])->name('categorySave');

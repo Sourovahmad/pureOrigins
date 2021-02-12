@@ -1,13 +1,13 @@
 <!-- Sidebar -->
 <ul class="navbar-nav bg-abasas-dark  sidebar sidebar-dark accordion sidebar-toggled " id="accordionSidebar">
 
-
+{{-- 
 
     <li class="nav-item  ">
         <a class="nav-link text-center btn  " href="{{ route('post.index') }}">
             <button type="button" class="btn btn-outline-success"><i class="fas fa-plus text-light"></i>New </button>
             </a>
-    </li>
+    </li> --}}
 
 
     <hr class="sidebar-divider m-1 p-0 ">
@@ -22,7 +22,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
 
-
+{{-- 
     <li class="nav-item">
         <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseSell"
             aria-expanded="true" aria-controls="collapseSell">
@@ -35,16 +35,14 @@
 
                 {{-- <a class="collapse-item" href="{{ route('blogs.index') }}">All Blogs </a> --}}
                 {{-- <a class="collapse-item" href="">New Blog </a>
-            <a class="collapse-item" href="">Blog Category </a> --}}
+            <a class="collapse-item" href="">Blog Category </a> 
 
             </div>
         </div>
-    </li>
-
+    </li> --}}
 
     <!-- Divider -->
-    <!-- Divider -->
-    <hr class="sidebar-divider m-1 p-0 ">
+    {{-- <hr class="sidebar-divider m-1 p-0 ">
 
 
     <li class="nav-item">
@@ -62,9 +60,9 @@
             </div>
         </div>
       
-    </li>
+    </li> --}}
 
-    <hr class="sidebar-divider m-1 p-0 ">
+    {{-- <hr class="sidebar-divider m-1 p-0 "> --}}
 
 
     <li class="nav-item">

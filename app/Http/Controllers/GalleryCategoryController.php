@@ -103,4 +103,18 @@ class GalleryCategoryController extends Controller
         return redirect()->back()->withErrors('Category Deleted');
 
     }
+
+
+
+    public function ajaxSave(Request $request, galleryCategory $galleryCategory)
+    {
+
+        $category = new galleryCategory;
+        $category->name = $request->name;
+        $category->description = $request->description;
+        $category->save();
+        $categories = galleryCategory::all();
+        return $categories;
+
+    }
 }

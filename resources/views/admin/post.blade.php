@@ -32,7 +32,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid m-0 p-0">
-            <div class="card mb-4 shadow">
+            <div class="card mb-4  shadow">
 
 
                 <form method="POST" id="createPostForm" action="" enctype="multipart/form-data">
@@ -62,10 +62,12 @@
                                 </div>
 
                             </div>
+                            <div class="col-md-3 col-sm-12  " id="allInputSidebar">
+                                
 
-                            <div class="col-md-3 col-sm-12">
+                               
 
-                                <div class="form-group col-12">
+                                <div class="form-group col-12" id="PostTypeDiv">
                                     <label for="postType">Post Type<span style="color: red"> *</span></label>
                                     <select class="form-control form-control" value="" name="postType" id="postType"
                                         required>
@@ -75,7 +77,8 @@
                                         <option value="gallery">Gallery</option>
                                     </select>
                                 </div>
-                                <div id='addSection'> </div>
+                                <div  id='addSection'> </div>
+ 
 
 
                                 <div class="form-group col-12 " id="formimageInput">
@@ -90,8 +93,10 @@
                                         class="btn btn-success btn-lg d-block  d-md-none"> Publish</button>
                                 </div>
 
-                            </div>
+                        </div>
+                        <div class="col-12" id=''>
 
+                        </div>
                         </div>
 
 
@@ -114,6 +119,11 @@
 
                     var postType = $('#postType').val();
                     if (postType == 'banner') {
+                        
+                        // if (! $('#allInputSidebar').hasClass( "col-md-3" )){
+                        //     $('#allInputSidebar').addClass( "col-md-3" )
+                        // }
+                        $('#addSection').html('');
 
                         var action = "{{ route('banners.store') }}";
                         $('#createPostForm').attr('action', action);
@@ -148,15 +158,15 @@
 
                         $('#title').removeAttr('required')
                         $('#description').removeAttr('required')
-                        $('#formAllInput').hide();
-
+                        $('#formAllInput').hide();PostTypeDiv
+                        // $('#allInputSidebar').removeClass('col-md-3')
 
                         var gallerycategoryyhtml = '';
-                        gallerycategoryyhtml += '<div class="form-group col-12"> ';
+                        gallerycategoryyhtml += '<div class="form-group col-12  "> ';
                         gallerycategoryyhtml +=
                             '    <label for="category_id">Program Category<span style="color: red"> *</span></label>';
                         gallerycategoryyhtml +=
-                            '    <select class="form-control form-control" value="" name="gallery_category_id" id="category_id"';
+                            '    <select class="form-control form-control" value="" name="gallery_category_id" id="gallery_category_id"';
                         gallerycategoryyhtml += '       required>';
                         gallerycategoryyhtml +=
                             '        <option disabled selected value> select a Category </option>';
@@ -231,7 +241,7 @@
                     if (postType == 'gallery') {
 
                         var home = "{{ route('index') }}";
-                        var link = "admin/gallery-categories"
+                        var link = "admin/categorySave"
                         var action = home.trim() + '/' + link.trim();
 
                     }
@@ -244,7 +254,7 @@
                             'name': name
                         },
                         success: function(categories) {
-                            if (categories != 'Error') {
+                            console.log(categories)
                                 var html2 = '';
 
                                 var len = categories.length - 1;
@@ -266,7 +276,7 @@
 
                                 });
                                 $("#gallery_category_id").html(html2);
-                            }
+                     
 
 
 
@@ -283,7 +293,7 @@
 
 
                     var html = '';
-                    $('#rowForCAtegory').html(html);
+                    $('#inputForCategory').html(html);
 
 
                 });
